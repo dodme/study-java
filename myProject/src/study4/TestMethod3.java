@@ -31,7 +31,10 @@ public class TestMethod3 {
 		int month = cal.get(Calendar.MONTH) + 1;
 		int date = cal.get(Calendar.DATE);
 
-		String today = year + "-" + month + "-" + date;
+		String mm = (month < 10) ? "0" + month : "" + month;
+		String dd = (date < 10) ? "0" + date : "" + date;
+
+		String today = year + "-" + mm + "-" + dd;
 
 		return today;
 	}
